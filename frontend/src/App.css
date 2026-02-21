@@ -14,7 +14,6 @@ body {
   align-items: center;
 }
 
-/* ===== Form Container ===== */
 .form-container {
   background: #ffffff;
   width: 350px;
@@ -30,7 +29,6 @@ body {
   color: #333;
 }
 
-/* ===== Inputs ===== */
 .form-container input {
   width: 100%;
   padding: 12px;
@@ -47,7 +45,6 @@ body {
   box-shadow: 0px 0px 5px rgba(102, 126, 234, 0.5);
 }
 
-/* ===== Buttons ===== */
 .form-container button {
   width: 100%;
   padding: 12px;
@@ -66,7 +63,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== Links ===== */
 .form-container a {
   display: block;
   text-align: center;
@@ -80,7 +76,6 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Error Message ===== */
 .error-message {
   color: red;
   font-size: 15px;
@@ -88,7 +83,6 @@ body {
   text-align: center;
 }
 
-/* ===== Success Message ===== */
 .success-message {
   color: green;
   font-size: 15px;
@@ -96,7 +90,6 @@ body {
   text-align: center;
 }
 
-/* ===== Home Page ===== */
 .home-container {
   background: #ffffff;
   padding: 40px;
@@ -130,7 +123,6 @@ body {
   background: #e60000;
 }
 
-/* ===== Animation ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -142,7 +134,6 @@ body {
   }
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 400px) {
   .form-container {
     width: 90%;

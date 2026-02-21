@@ -32,14 +32,12 @@ public class UserService {
 
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    // 🔥 Secure 256-bit key (IMPORTANT FIX)
     private final SecretKey key = 
             Keys.hmacShaKeyFor(
                 "mySuperSecretKeyForJwtAuthentication12345678"
                 .getBytes()
             );
 
-    // ================= REGISTER =================
     public String register(User user) {
 
         if (repo.findByEmail(user.getEmail()) != null)
@@ -55,7 +53,6 @@ public class UserService {
         return "Registration Successful";
     }
 
-    // ================= LOGIN =================
     public Map<String,String> login(String email, String password) {
 
         User user = repo.findByEmail(email);
@@ -70,7 +67,7 @@ public class UserService {
                 .setExpiration(
                     new Date(System.currentTimeMillis() + 1000 * 60 * 60)
                 )
-                .signWith(key, SignatureAlgorithm.HS256)   // ✅ FIXED
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
 
         Map<String,String> response = new HashMap<>();
@@ -80,7 +77,6 @@ public class UserService {
         return response;
     }
 
-    // ================= SEND OTP =================
     public String sendOtp(String email) {
 
         User user = repo.findByEmail(email);
@@ -107,7 +103,6 @@ public class UserService {
         return "OTP Sent Successfully";
     }
 
-    // ================= RESET PASSWORD =================
     public String resetPassword(String email, String otp, String newPassword) {
 
         User user = repo.findByEmail(email);
