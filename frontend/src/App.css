@@ -1,0 +1,150 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Form Container ===== */
+.form-container {
+  background: #ffffff;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Inputs ===== */
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.form-container input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(102, 126, 234, 0.5);
+}
+
+/* ===== Buttons ===== */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* ===== Links ===== */
+.form-container a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #667eea;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Error Message ===== */
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ===== Success Message ===== */
+.success-message {
+  color: green;
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ===== Home Page ===== */
+.home-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.home-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.home-container h3 {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.home-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-container button:hover {
+  background: #e60000;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 400px) {
+  .form-container {
+    width: 90%;
+  }
+}
